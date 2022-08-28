@@ -38,6 +38,7 @@ function handleClick() {
 
 
 
+
 let drums = document.querySelectorAll(".drum");
 
 for (var i = 0; i < drums.length; i++) {
