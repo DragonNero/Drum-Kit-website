@@ -1,6 +1,8 @@
 function handleClick() {
 
   let clickedButton = this.innerHTML;
+  this.style.color = "white";
+
   if (clickedButton == "w") {
     let audio = new Audio("sounds/tom-1.mp3");
     audio.play();
@@ -36,8 +38,19 @@ function handleClick() {
   }
 }
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-
+async function mayhem(nbIt) {
+  let min = 0;
+  let max = drums.length -1;
+  for (let j = 0; j <  nbIt; j++) {
+    let rand = Math.floor(Math.random() * (max - min + 1) + min);
+    drums[rand].click();
+    await sleep(100);
+  }
+}
 
 let drums = document.querySelectorAll(".drum");
 
