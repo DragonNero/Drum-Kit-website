@@ -1,8 +1,8 @@
 document.addEventListener("keydown", function (event) {
   let pressedKey = event.key;
-  console.log(pressedKey);
   if (pressedKey === "w" || pressedKey === "a" || pressedKey === "s" || pressedKey === "d" || pressedKey === "j" || pressedKey === "k" || pressedKey === "l") {
       handleSounds(pressedKey);
+      buttonAnimation(pressedKey);
   }
 
 });
@@ -46,9 +46,11 @@ function handleSounds(clickedButton) {
 function handleClick() {
 
   let clickedButton = this.innerHTML;
-  this.style.color = "white";
+  // this.style.color = "white";
+
 
   handleSounds(clickedButton);
+  buttonAnimation(clickedButton);
 
 
   // Created constructor function for playing audio
@@ -123,4 +125,12 @@ let drums = document.querySelectorAll(".drum");
 
 for (var i = 0; i < drums.length; i++) {
   drums[i].addEventListener("click", handleClick);
+}
+
+function buttonAnimation(currentKey) {
+  let activeButton = document.querySelector("."+ currentKey);
+  activeButton.classList.add("pressed");
+  setTimeout(function() {
+    activeButton.classList.remove("pressed");
+  }, 100)
 }
