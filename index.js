@@ -3,38 +3,77 @@ function handleClick() {
   let clickedButton = this.innerHTML;
   this.style.color = "white";
 
-  if (clickedButton == "w") {
-    let audio = new Audio("sounds/tom-1.mp3");
-    audio.play();
-  }
+  // if (clickedButton == "w") {
+  //   let audio = new Audio("sounds/tom-1.mp3");
+  //   audio.play();
+  // }
+  //
+  // if (clickedButton == "a") {
+  //   let audio = new Audio("sounds/tom-2.mp3");
+  //   audio.play();
+  // }
+  //
+  // if (clickedButton == "s") {
+  //   let audio = new Audio("sounds/tom-3.mp3");
+  //   audio.play();
+  // }
+  //
+  // if (clickedButton == "d") {
+  //   let audio = new Audio("sounds/tom-4.mp3");
+  //   audio.play();
+  // }
+  //
+  // if (clickedButton == "j") {
+  //   let audio = new Audio("sounds/snare.mp3");
+  //   audio.play();
+  // }
+  //
+  // if (clickedButton == "k") {
+  //   let audio = new Audio("sounds/crash.mp3");
+  //   audio.play();
+  // }
+  // if (clickedButton == "l") {
+  //   let audio = new Audio("sounds/kick-bass.mp3");
+  //   audio.play();
+  // }
+  switch (clickedButton) {
+    case "w":
+      let tom1 = new Audio("sounds/tom-1.mp3");
+      tom1.play();
+      break;
 
-  if (clickedButton == "a") {
-    let audio = new Audio("sounds/tom-2.mp3");
-    audio.play();
-  }
+    case "a":
+      let tom2 = new Audio("sounds/tom-2.mp3");
+      tom2.play();
+      break;
 
-  if (clickedButton == "s") {
-    let audio = new Audio("sounds/tom-3.mp3");
-    audio.play();
-  }
+    case "s":
+      let tom3 = new Audio("sounds/tom-3.mp3");
+      tom3.play();
+      break;
 
-  if (clickedButton == "d") {
-    let audio = new Audio("sounds/tom-4.mp3");
-    audio.play();
-  }
+    case "d":
+      let tom4 = new Audio("sounds/tom-4.mp3");
+      tom4.play();
+      break;
 
-  if (clickedButton == "j") {
-    let audio = new Audio("sounds/snare.mp3");
-    audio.play();
-  }
+    case "j":
+      let snare = new Audio("sounds/snare.mp3");
+      snare.play();
+      break;
 
-  if (clickedButton == "k") {
-    let audio = new Audio("sounds/crash.mp3");
-    audio.play();
-  }
-  if (clickedButton == "l") {
-    let audio = new Audio("sounds/kick-bass.mp3");
-    audio.play();
+    case "k":
+      let crash = new Audio("sounds/crash.mp3");
+      crash.play();
+      break;
+
+    case "l":
+      let kickBass = new Audio("sounds/kick-bass.mp3");
+      kickBass.play();
+      break;
+
+    default: console.log(clickedButton);
+
   }
 }
 
