@@ -1,7 +1,7 @@
 document.addEventListener("keydown", function (event) {
   let pressedKey = event.key;
   console.log(pressedKey);
-  if (pressedKey === "w" || pressedKey === "a") {
+  if (pressedKey === "w" || pressedKey === "a" || pressedKey === "s" || pressedKey === "d" || pressedKey === "j" || pressedKey === "k" || pressedKey === "l") {
       handleSounds(pressedKey);
   }
 
