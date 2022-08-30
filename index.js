@@ -36,6 +36,21 @@ function handleClick() {
   //   let audio = new Audio("sounds/kick-bass.mp3");
   //   audio.play();
   // }
+
+
+//   Created constructor function for playing audio
+//   function Audio (fileLocation) {
+//     this.fileLocation = fileLocation;
+//     this.play = function();
+//     }
+//   }
+//
+// let tom1 = new Audio ("sounds/tom-1.mp3");
+// tom1.play();
+// break;
+
+
+
   switch (clickedButton) {
     case "w":
       let tom1 = new Audio("sounds/tom-1.mp3");
